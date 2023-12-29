@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/83a52a2b00.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+        <!-- first of all go to the web3forms and create you access key. 
+        after that scroll down and copy the form tag attribute.
+        and also copy the input tag also this will connect to the gmail.  -->
+
+
+    <div class="container">
+
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+
+            <!-- copy this input tag  -->
+            <input type="hidden" name="access_key" value="19e0a295-9ebc-4435-9f01-427e54962f01">
+
+            <!-- end of the copied tag -->
+            
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="name" name="name" placeholder="Enter your name" id="contactname" onkeyup="validname()">
+                <span id="name-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="Phone">Phone No.</label>
+                <input type="phone" name="phone" placeholder="123 456 7890" id="contactphone" onkeyup="validphone()">
+                <span id="phone-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Id</label>
+                <input type="email" name="email" placeholder="Enter email" id="contactemail" onkeyup="validemail()">
+                <span id="email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="messages">Your Message</label>
+                <textarea rows="5" name="message" placeholder="Enter your message" id="contacttext"
+                    onkeyup="validtext()"></textarea>
+                <span id="message-error"></span>
+            </div>
+
+            <button onclick=" return validform()">Submit</button>
+            <span id="sub-error"></span>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
